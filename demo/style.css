@@ -1,0 +1,138 @@
+:root {
+  color: #1f2937;
+  background:
+    radial-gradient(circle at top, rgba(255, 214, 153, 0.7), transparent 36%),
+    linear-gradient(180deg, #fff9f0 0%, #f6efe2 100%);
+  font-family:
+    'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+code {
+  padding: 0.15rem 0.4rem;
+  border-radius: 999px;
+  background: rgba(116, 63, 0, 0.08);
+  color: #6f3f00;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.demo-shell {
+  width: min(960px, calc(100vw - 2rem));
+  margin: 0 auto;
+  padding: 4rem 0 5rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.hero-panel,
+.preview-panel {
+  padding: clamp(1.5rem, 2vw, 2rem);
+  border: 1px solid rgba(111, 63, 0, 0.14);
+  border-radius: 28px;
+  background: rgba(255, 252, 247, 0.78);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 24px 80px rgba(111, 63, 0, 0.08);
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9a5a12;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 6vw, 4.75rem);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+  color: #2e1800;
+}
+
+.lede {
+  max-width: 42rem;
+  margin: 1.25rem 0 0;
+  font-size: 1.08rem;
+  color: rgba(46, 24, 0, 0.78);
+}
+
+.preview-panel {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.wordmark-frame {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 245, 230, 0.95)),
+    repeating-linear-gradient(
+      0deg,
+      rgba(154, 90, 18, 0.08),
+      rgba(154, 90, 18, 0.08) 1px,
+      transparent 1px,
+      transparent 32px
+    );
+}
+
+.wordmark-frame svg {
+  width: min(100%, 480px);
+  overflow: visible;
+}
+
+.control-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: #6b4b29;
+}
+
+.control-block strong {
+  font-size: 1.05rem;
+  color: #2e1800;
+}
+
+.progress-slider {
+  width: 100%;
+  accent-color: #b86200;
+}
+
+@media (max-width: 640px) {
+  .demo-shell {
+    padding: 1.25rem 0 2rem;
+  }
+
+  .wordmark-frame {
+    min-height: 180px;
+  }
+}

@@ -25,7 +25,6 @@ dist-ssr
 
 # Special directories
 target
-demo
 index.html
 tests
 .DS_Store
