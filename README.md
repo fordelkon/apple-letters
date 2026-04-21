@@ -75,40 +75,29 @@ import { useLettersRender } from '@delkon/apple-letters'
 const progress = ref(0.65)
 
 const model = useLettersRender(
-  computed(() => ({
-    text: 'engine',
-    progress: progress.value,
-    color: '#111827',
-    strokeWidth: 2,
-  })),
+    computed(() => ({
+        text: 'engine',
+        progress: progress.value,
+        color: '#111827',
+        strokeWidth: 1,
+    })),
+)
+
+const visiblePaths = computed(() =>
+    model.value.paths.filter(item => Math.abs(item.strokeDashoffset) < 0.98),
 )
 </script>
 
 <template>
-  <svg :viewBox="model.svg.viewBox" fill="none">
-    <path
-      v-for="item in model.paths"
-      :key="item.key"
-      :d="item.d"
-      :stroke="item.stroke"
-      :stroke-width="item.strokeWidth"
-      :stroke-dasharray="item.strokeDasharray"
-      :stroke-dashoffset="item.strokeDashoffset"
-      :stroke-linecap="item.linecap"
-      :stroke-linejoin="item.linejoin"
-      pathLength="1"
-      fill="none"
-    />
-    <circle
-      v-for="item in model.dots"
-      :key="item.key"
-      :cx="item.translateX != null ? item.cx + item.translateX : item.cx"
-      :cy="item.cy"
-      :r="item.r"
-      :fill="item.fill"
-      :opacity="item.opacity"
-    />
-  </svg>
+    <svg :viewBox="model.svg.viewBox" fill="none">
+        <path v-for="item in visiblePaths" :key="item.key" :d="item.d" :stroke="item.stroke"
+            :stroke-width="item.strokeWidth" :stroke-dasharray="item.strokeDasharray"
+            :stroke-dashoffset="item.strokeDashoffset" :stroke-linecap="item.linecap" :stroke-linejoin="item.linejoin"
+            pathLength="1" fill="none" />
+    </svg>
+    <circle v-for="item in model.dots" :key="item.key"
+        :cx="item.translateX != null ? item.cx + item.translateX : item.cx" :cy="item.cy" :r="item.r" :fill="item.fill"
+        :opacity="item.opacity" />
 </template>
 ```
 
