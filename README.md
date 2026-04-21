@@ -1,11 +1,11 @@
 # Apple Letters
 
-`apple-letters` is a Vue 3 handwritten text library built around a small engine-first core. The published package exposes a thin component layer, a composable, and the render-model engine used underneath.
+`@delkon/apple-letters` is a Vue 3 handwritten text library built around a small engine-first core. The published package exposes a thin component layer, a composable, and the render-model engine used underneath.
 
 ## Install
 
 ```bash
-pnpm add apple-letters
+pnpm add @delkon/apple-letters
 ```
 
 `vue` is a peer dependency.
@@ -15,7 +15,7 @@ pnpm add apple-letters
 ```vue
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Letters } from 'apple-letters'
+import { Letters } from '@delkon/apple-letters'
 
 const progress = ref(0.4)
 </script>
@@ -26,13 +26,13 @@ const progress = ref(0.4)
 ```
 
 ```ts
-import { createLettersRenderModel, useLettersRender } from 'apple-letters'
+import { createLettersRenderModel, useLettersRender } from '@delkon/apple-letters'
 ```
 
 ## API
 
 ```ts
-import { Letters, createLettersRenderModel, layoutText, useLettersRender } from 'apple-letters'
+import { Letters, createLettersRenderModel, layoutText, useLettersRender } from '@delkon/apple-letters'
 ```
 
 - `Letters`

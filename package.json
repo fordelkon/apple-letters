@@ -1,5 +1,5 @@
 {
-  "name": "apple-letters",
+  "name": "@delkon/apple-letters",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -35,5 +35,8 @@
     "vite": "^8.0.9",
     "vue": "^3.5.32",
     "vue-tsc": "^3.2.7"
+  },
+  "dependencies": {
+    "@delkon/apple-letters": "^0.1.0"
   }
 }

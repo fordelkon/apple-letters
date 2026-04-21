@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      vue:
-        specifier: ^3.5.32
-        version: 3.5.32(typescript@6.0.3)
+      '@delkon/apple-letters':
+        specifier: ^0.1.0
+        version: 0.1.0(vue@3.5.32(typescript@6.0.3))
     devDependencies:
       '@types/node':
         specifier: ^24.12.2
@@ -27,6 +27,9 @@ importers:
       vite:
         specifier: ^8.0.9
         version: 8.0.9(@types/node@24.12.2)
+      vue:
+        specifier: ^3.5.32
+        version: 3.5.32(typescript@6.0.3)
       vue-tsc:
         specifier: ^3.2.7
         version: 3.2.7(typescript@6.0.3)
@@ -49,6 +52,11 @@ packages:
   '@babel/types@7.29.0':
     resolution: {integrity: sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A==}
     engines: {node: '>=6.9.0'}
+
+  '@delkon/apple-letters@0.1.0':
+    resolution: {integrity: sha512-D2g0gsE8y9ZIpPC0EuB/xeGgwhan6G2bON+5B011jeTFa5QVVoqqNBhh016s2Gk6kMnJkaJGpjomfBl+ovF1hA==}
+    peerDependencies:
+      vue: ^3.5.0
 
   '@emnapi/core@1.9.2':
     resolution: {integrity: sha512-UC+ZhH3XtczQYfOlu3lNEkdW/p4dsJ1r/bP7H8+rhao3TTTMO1ATq/4DdIi23XuGoFY+Cz0JmCbdVl0hz9jZcA==}
@@ -465,6 +473,10 @@ snapshots:
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
+
+  '@delkon/apple-letters@0.1.0(vue@3.5.32(typescript@6.0.3))':
+    dependencies:
+      vue: 3.5.32(typescript@6.0.3)
 
   '@emnapi/core@1.9.2':
     dependencies:

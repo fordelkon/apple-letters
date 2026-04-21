@@ -4,6 +4,11 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig(({ command }) => ({
   plugins: [vue()],
   publicDir: command === 'serve' ? 'public' : false,
+  resolve: {
+    alias: {
+      '@delkon/apple-letters': '/src/lib/index.ts',
+    },
+  },
   build: {
     lib: {
       entry: 'src/lib/index.ts',
