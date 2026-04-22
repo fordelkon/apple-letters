@@ -1,6 +1,8 @@
 # Apple Letters
 
-`@delkon/apple-letters` is a Vue 3 handwritten text library built around a small engine-first core.
+[Live Animation Demo](https://delkonsblog.pages.dev/apple-letters/)
+
+`@delkon/apple-letters` is a Vue 3 library for generating Apple-style "hello" boot text animations, built around a small engine-first core.
 
 It gives you two layers:
 
